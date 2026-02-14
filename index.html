@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Anna ❤️</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Sacramento&family=Nunito:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background Animation -->
+    <div class="background-container" id="bg-container">
+        <div class="flowers"></div>
+        <div class="hearts-bg"></div>
+    </div>
+
+    <!-- Music Control -->
+    <div class="music-control" id="music-control">
+        <button id="music-toggle" class="btn-music"><i class="fas fa-volume-mute"></i> Music</button>
+        <audio id="bg-music" loop>
+            <source src="static/music/song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="main-container">
+
+        <!-- Header Section -->
+        <header class="header-section fade-in">
+            <h1 class="main-title">Happy Valentine’s Day,<br>Anna Althafunnisa ❤️</h1>
+            <p class="subtitle">For the most beautiful and precious girl in my life</p>
+        </header>
+
+        <!-- Dynamic Love Meter -->
+        <div class="love-meter-container fade-in">
+            <label>My Love for Anna</label>
+            <div class="progress-bar">
+                <div class="progress-fill" id="love-meter-fill"></div>
+                <span class="percentage">0%</span>
+            </div>
+        </div>
+
+        <!-- Romantic Message Section -->
+        <section class="romantic-message fade-in delay-1">
+            <p class="love-text">
+                My Dearest Anna,<br><br>
+                Every day with you feels like a beautiful dream I never want to wake up from.
+                You bring so much light, warmth, and joy into my world.
+                On this special day, I want to remind you how deeply I cherish you.
+                You are my everything, my today, and all of my tomorrows.
+            </p>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section fade-in delay-2">
+            <h2>Our Beautiful Memories 📸</h2>
+            <div class="gallery-grid">
+                <!-- Photo 1: Couple at Rice Field -->
+                <div class="photo-card" onclick="openModal('static/images/photo1.jpg')">
+                    <img src="static/images/photo1.jpg" alt="Us in Nature"
+                        onerror="this.src='https://placehold.co/300x400/pink/white?text=Upload+Photo+1'">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <i class="fas fa-heart"></i>
+                            <p>Adventures with you 🌿</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Photo 2: Girl Solo (Green Wall) -->
+                <div class="photo-card" onclick="openModal('static/images/photo2.jpg')">
+                    <img src="static/images/photo2.jpg" alt="Beautiful Anna"
+                        onerror="this.src='https://placehold.co/300x400/pink/white?text=Upload+Photo+2'">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <i class="fas fa-heart"></i>
+                            <p>Prettiest Girl 💚</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Photo 3: Couple Shopping -->
+                <div class="photo-card" onclick="openModal('static/images/photo3.jpg')">
+                    <img src="static/images/photo3.jpg" alt="Shopping Date"
+                        onerror="this.src='https://placehold.co/300x400/pink/white?text=Upload+Photo+3'">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <i class="fas fa-heart"></i>
+                            <p>Us Always 🛍️</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section class="letter-section fade-in delay-3">
+            <h2>A Letter For You, Anna 💌</h2>
+            <div class="letter-container">
+                <div id="typing-text" class="typing-content"></div>
+            </div>
+        </section>
+
+        <!-- Interaction Section -->
+        <section class="interaction-section fade-in delay-4">
+            <button id="love-btn" class="love-btn">Anna, Click This If You Love Me ❤️</button>
+            <p id="response-msg" class="hidden-msg"></p>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="countdown-section fade-in delay-5">
+            <h3>Time Until Our Next Valentine's Day ⏳</h3>
+            <div id="countdown" class="countdown-timer">
+                <div><span id="days">00</span> Days</div>
+                <div><span id="hours">00</span> Hours</div>
+                <div><span id="minutes">00</span> Minutes</div>
+                <div><span id="seconds">00</span> Seconds</div>
+            </div>
+        </section>
+
+        <footer>
+            Created with all my heart for you, Anna.
+        </footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
